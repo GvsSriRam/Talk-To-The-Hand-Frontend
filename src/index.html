@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TTTH</title>
+  <link rel="shortcut icon" href="./imgs/favicon_io/favicon.ico">
+  <link rel="icon" href="./imgs/favicon_io/favicon.ico">
+  <link rel="icon" sizes="16x16" href="./imgs/favicon_io/favicon-16x16.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="./imgs/favicon_io/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./imgs/favicon_io/apple-touch-icon.png">
+  
+  <link href="./signstyle.css" rel="stylesheet">
+  <script type="module" src="./signjs.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div id="icon-container">
+    <img src="./imgs/love.png" alt="Start" id="start-icon">
+  </div>
+
+  <div id="content" class="invisible">
+    <h1>Talk To The Hand</h1>
+
+    <img src="./imgs/The-complete-ASL-letter-set-with-sample-segmented-images.png" alt="ASL - Letters" id="ASLLetters">
+
+    <section id="demos">
+      <h2 class="demo-title">Real-time Sign Language Detection</h2>
+
+      <div id="liveView" class="videoView">
+        <button id="webcamButton" class="mdc-button mdc-button--raised">
+          <span class="mdc-button__ripple"></span>
+          <span class="mdc-button__label">ENABLE WEBCAM</span>
+        </button>
+        <div style="position: relative;">
+          <video id="webcam" style="position: abso" autoplay playsinline></video>
+          <canvas class="output_canvas" id="output_canvas" style="position: absolute; left: 0px; top: 0px;"></canvas>
+        </div>
+        <div id="prediction"></div>
+        <button id="appendButton">Append Result to Prediction</button>
+        <div id="fullPrediction"></div>
+      </div>
+
+      <!-- Spell Check Section -->
+      <div id="spell-check-section">
+        <h2 class="demo-title">Spell Check</h2>
+        <button id="spell-check-button">Check Spelling</button>
+        <div id="spell-check-results"></div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <!-- Add other navigation links here -->
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>
+
